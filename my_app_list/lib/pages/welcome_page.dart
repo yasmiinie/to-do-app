@@ -7,31 +7,33 @@ class Welcome_page extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var largeur = MediaQuery.of(context).size.width;
-    var hauteur = MediaQuery.of(context).size.height;
+    double W = MediaQuery.of(context).size.width;
+    double H = MediaQuery.of(context).size.height;
     return Scaffold(
-      body: SafeArea(
-          child: Center(
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SvgPicture.asset('lib/images/welcome_image.svg'),
             SizedBox(
-              height: hauteur * 0.06,
+              height: H * 0.06,
             ),
-            Text(
+            const Text(
               'Welcome to your \n      To-Do app',
               maxLines: 2,
               style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
             ),
             SizedBox(
-              height: hauteur * 0.06,
+              height: H * 0.06,
             ),
-            Text_button(text: 'Get Started', couleur: Colors.amber)
+            Text_button(
+              text: 'Get Started',
+              couleur: Colors.amber,
+            )
           ],
         ),
-      )),
+      ),
     );
   }
 }

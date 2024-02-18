@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_app_list/pages/add_task.dart';
+//import 'package:my_app_list/pages/tasks.dart';
 import 'package:my_app_list/pages/welcome_page.dart';
 
 void main() {
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Welcome_page(),
+      home: AddTask(),
     );
   }
 }
